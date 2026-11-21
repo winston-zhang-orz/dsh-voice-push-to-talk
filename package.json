@@ -1,0 +1,29 @@
+{
+  "name": "dsh-voice-push-to-talk",
+  "version": "1.0.2",
+  "description": "Hold-to-talk hotkey for the DSH voice input plugin: hold Right Option/Alt to record, release to stop and transcribe.",
+  "author": "wizhang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winston-zhang-orz/dsh-voice-push-to-talk.git"
+  },
+  "homepage": "https://github.com/winston-zhang-orz/dsh-voice-push-to-talk#readme",
+  "bugs": "https://github.com/winston-zhang-orz/dsh-voice-push-to-talk/issues",
+  "keywords": ["deepseek-harness", "dsh", "voice-input", "push-to-talk", "hotkey"],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "LICENSE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
